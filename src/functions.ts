@@ -23,9 +23,9 @@ function addAllNumbers(items: number[]): number {
 console.log("addAllNumbers:", addAllNumbers([5, 7, 9, 11, 3, 2, 1]));
 
 
-// return type inference
+// Explicit Return
 
-function formatGreeting(name: string, greeting: string) {
+function formatGreeting(name: string, greeting: string): string {
     return `${greeting}, ${name}`
 }
 

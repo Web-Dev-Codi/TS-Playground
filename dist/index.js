@@ -1,7 +1,7 @@
 "use strict";
 // Type annotation
 // Number Type
-let age = 30;
+// let age: number = 30;
 console.log(`~ age:`, age);
 // String Type
 let firstName = "Brian";
