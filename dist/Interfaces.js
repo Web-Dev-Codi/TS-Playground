@@ -16,5 +16,10 @@ const newPost = {
 };
 // Interfaces as function arguments
 function createPost(post) {
-    return console.log(newPost);
+    console.log(`Created post:  ${post.title} by ${post.author.name}`);
 }
+createPost(newPost);
+// With Arrays
+let posts = [];
+posts.push(newPost);
+console.log("posts:", posts);
