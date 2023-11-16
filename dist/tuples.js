@@ -2,7 +2,7 @@
 // Tuples
 // Allows an array of values of diffrent types in a specific order
 // Types must apper in order declared
-let person = ["A String", 34, true];
+// let person: [string, number, boolean] = ["A String", 34, true];
 // Tuples examples
 let hsla;
 hsla = [233, "100%", "55%", 1];
