@@ -1,14 +1,11 @@
 "use strict";
-// // classes 101
-// // A class is a blueprint for an object. How they look and behave
+// // Classes as Types
 // type Base = "classic" | "thick" | "thin" | "garlic";
-// // Allowes to create new Pizza Objects unlike interfaces
 // class Pizza {
 //     constructor(title: string, price: number) {
 //         this.title = title;
 //         this.price = price;
 //     }
-//     // Now title is private an can only be ascessed within the class and not outside of the class
 //     private title: string;
 //     private price: number;
 //     private base: Base = "classic";
@@ -23,9 +20,12 @@
 //         this.base = b;
 //     }
 // }
-// const pizzaOne = new Pizza("Astra Special", 23);
-// pizzaOne.selectBase("thick");
-// pizzaOne.addTopping("add love");
-// pizzaOne.addTopping("more love");
-// pizzaOne.removeTopping("add love");
-// console.log("pizzaOne:", pizzaOne);
+// const pizzaOne: Pizza = new Pizza("Astra Special", 15);
+// const pizzaTwo: Pizza = new Pizza("Neby Special", 22);
+// function addRonitoPizza(pizzas: Pizza[]): void {
+//     for (const p of pizzas) {
+//         p.addTopping("Roni")
+//     }
+// }
+// addRonitoPizza([pizzaOne, pizzaTwo])
+// console.log(pizzaOne,pizzaTwo);
