@@ -1,5 +1,5 @@
 "use strict";
-// Inheritance
+// Abstract Classes
 class MenuItem {
     constructor(title, price) {
         this.title = title;
@@ -7,6 +7,9 @@ class MenuItem {
     }
     get details() {
         return `${this.title} - €${this.price}`;
+    }
+    format() {
+        return `This menu item is called ${this.title} and is €${this.price}`;
     }
 }
 // Pizza inherates MenuItem constructor
@@ -27,7 +30,7 @@ class Pizza extends MenuItem {
     }
 }
 const pizzaOne = new Pizza("Astra Special", 15);
-function printMenuItem(item) {
-    console.log(item.details);
+function printFormatted(val) {
+    console.log(val.format());
 }
-printMenuItem(pizzaOne);
+printFormatted(pizzaOne);

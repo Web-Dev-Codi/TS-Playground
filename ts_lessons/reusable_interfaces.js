@@ -17,4 +17,3 @@ const person = {
 };
 printQuantity(fruit);
 printQuantity(vehicle);
-printQuantity(person);

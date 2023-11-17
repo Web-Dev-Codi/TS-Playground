@@ -1,14 +1,22 @@
-// Inheritance
+// Abstract Classes
 
 type Base = "classic" | "thick" | "thin" | "garlic";
 
+interface HasFormatter {
+    format(): string;
+}
 
-class MenuItem {
+
+class MenuItem implements HasFormatter {
     constructor(private title: string, private price: number) { }
 
 
     get details(): string {
         return `${this.title} - €${this.price}`;
+    }
+
+    format(): string {
+        return `This menu item is called ${this.title} and is €${this.price}`;
     }
 }
 
@@ -34,8 +42,9 @@ class Pizza extends MenuItem {
 
 const pizzaOne: Pizza = new Pizza("Astra Special", 15);
 
-function printMenuItem(item: MenuItem): void {
-    console.log(item.details);
+function printFormatted(val: HasFormatter): void {
+    console.log(val.format());
 }
-printMenuItem(pizzaOne)
 
+
+printFormatted(pizzaOne);
