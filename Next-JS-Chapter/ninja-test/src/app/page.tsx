@@ -1,12 +1,5 @@
 import PostCard from "@/components/PostCard";
 
-// Giving the promise a type
-interface JsonPosts {
-	id: number;
-	title: string;
-	body: string;
-}
-
 const fetchPosts = async (): Promise<JsonPosts[]> => {
 	const res = await fetch(
 		"https://jsonplaceholder.typicode.com/users/1/posts"
