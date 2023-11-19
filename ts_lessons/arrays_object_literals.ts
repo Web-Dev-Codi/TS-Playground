@@ -18,29 +18,29 @@ const f = fruits[3];
 console.log("f:", f);
 
 
-//Object Literals
+// Object Literals
 
-// let user: { firstName: string, age: number, id: number; } = {
-//     firstName: "Brian",
-//     age: 100,
-//     id: 243
-// };
+let user: { firstName: string, age: number, id: number; } = {
+    firstName: "Brian",
+    age: 100,
+    id: 243
+};
 
-// user.firstName = "Gülden";
-// user.id = 22;
-// user.age = 35;
-// console.log("user:", user);
+user.firstName = "Gülden";
+user.id = 22;
+user.age = 35;
+console.log("user:", user);
 
 
 // Type inference with object literals
 
-// let person = {
-//     name: "Astra",
-//     age: 2,
-//     id: 34
-// };
+let person = {
+    name: "Astra",
+    age: 2,
+    id: 34
+};
 
-// person.name = "Brian";
-// person.age = 2;
-// person.id = 44;
+person.name = "Brian";
+person.age = 2;
+person.id = 44;
 console.log("person:", person);
