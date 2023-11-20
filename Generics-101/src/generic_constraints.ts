@@ -1,6 +1,11 @@
 // Generic Classes
 
-class DataCollection<T> {
+
+interface HasId {
+    id: number;
+}
+// extends is the constraint. Must gave the id property
+class DataCollection<T extends HasId> {
     // Now data can be any type
     constructor(private data: T[]) { }
 
@@ -18,24 +23,25 @@ class DataCollection<T> {
     }
 
     deleteOne(id: number): void {
-        this.data = this.data.filter(item => item.id !== id)
+        this.data = this.data.filter(item => item.id !== id);
     }
 }
 
 interface User {
     name: string;
     score: number;
+    id: number;
 }
 
 const users = new DataCollection<User>([
-    { name: "Brian", score: 4200 },
-    { name: "Gülden", score: 1200 },
-    { name: "Astra", score: 2200 },
-    { name: "Neby", score: 7200 },
+    { name: "Brian", score: 4200, id: 1 },
+    { name: "Gülden", score: 1200, id: 2 },
+    { name: "Astra", score: 2200, id: 3 },
+    { name: "Neby", score: 7200, id: 4 },
 ]);
 
 
-users.add({ name: "Leeloo", score: 99999 });
+users.add({ name: "Leeloo", score: 99999, id: 5 });
 
 console.log("Load One:", users.loadOne());
 console.log("Load All:", users.loadAll());

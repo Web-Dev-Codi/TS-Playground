@@ -1,5 +1,6 @@
 "use strict";
 // Generic Classes
+// extends is the constraint. Must gave the id property
 class DataCollection {
     // Now data can be any type
     constructor(data) {
@@ -21,11 +22,11 @@ class DataCollection {
     }
 }
 const users = new DataCollection([
-    { name: "Brian", score: 4200 },
-    { name: "Gülden", score: 1200 },
-    { name: "Astra", score: 2200 },
-    { name: "Neby", score: 7200 },
+    { name: "Brian", score: 4200, id: 1 },
+    { name: "Gülden", score: 1200, id: 2 },
+    { name: "Astra", score: 2200, id: 3 },
+    { name: "Neby", score: 7200, id: 4 },
 ]);
-users.add({ name: "Leeloo", score: 99999 });
+users.add({ name: "Leeloo", score: 99999, id: 5 });
 console.log("Load One:", users.loadOne());
 console.log("Load All:", users.loadAll());
